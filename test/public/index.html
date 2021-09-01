@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Hello World</h1>
-</body>
+    <form id="testForm">
+      <input type="text" id="testForm" placeholder="Enter 'test'" />
+      <button id="testInput">Enter</button>
+    </form>
+    <script>
+      document.getElementById("testForm").addEventListener(
+        "submit",
+        axios.get("/api/test").then((res) => {
+          console.log(res.data);
+        })
+      );
+    </script>
+  </body>
 </html>
